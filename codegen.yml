@@ -19,54 +19,6 @@ generates:
     schema: ${BALANCER_SUBGRAPH}
     plugins:
       - schema-ast
-  modules/masterchef-subgraph/generated/masterchef-subgraph-types.ts:
-    schema: ${MASTERCHEF_SUBGRAPH}
-    documents: 'modules/masterchef-subgraph/masterchef-subgraph-queries.graphql'
-    plugins:
-      - typescript
-      - typescript-operations
-      - typescript-graphql-request
-    config:
-      scalars:
-        BigInt: string
-        Bytes: string
-        BigDecimal: string
-  modules/masterchef-subgraph/generated/masterchef-subgraph-schema.graphql:
-    schema: ${MASTERCHEF_SUBGRAPH}
-    plugins:
-      - schema-ast
-  modules/blocks-subgraph/generated/blocks-subgraph-types.ts:
-    schema: ${BLOCKS_SUBGRAPH}
-    documents: 'modules/blocks-subgraph/block-subgraph-queries.graphql'
-    plugins:
-      - typescript
-      - typescript-operations
-      - typescript-graphql-request
-    config:
-      scalars:
-        BigInt: string
-        Bytes: string
-        BigDecimal: string
-  modules/blocks-subgraph/generated/blocks-subgraph-schema.graphql:
-    schema: ${BLOCKS_SUBGRAPH}
-    plugins:
-      - schema-ast
-  modules/beets-bar-subgraph/generated/beets-bar-subgraph-types.ts:
-    schema: ${BEETS_BAR_SUBGRAPH}
-    documents: 'modules/beets-bar-subgraph/beets-bar-subgraph-queries.graphql'
-    plugins:
-      - typescript
-      - typescript-operations
-      - typescript-graphql-request
-    config:
-      scalars:
-        BigInt: string
-        Bytes: string
-        BigDecimal: string
-  modules/beets-bar-subgraph/generated/beets-bar-subgraph-schema.graphql:
-    schema: ${BEETS_BAR_SUBGRAPH}
-    plugins:
-      - schema-ast
   graphql_schema_generated.ts:
     schema: ./modules/**/*.gql
     plugins:

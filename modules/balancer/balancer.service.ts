@@ -483,17 +483,7 @@ export class BalancerService {
         });
 
         return joinExits.map((activity) => {
-            const valueUSD =
-                activity.valueUSD === '0' || BOOSTED_POOLS.includes(poolId)
-                    ? _.sum(
-                          activity.amounts.map((amount, index) => {
-                              return (
-                                  tokenPriceService.getPriceForToken(tokenPrices, pool.tokensList[index]) *
-                                  parseFloat(amount)
-                              );
-                          }),
-                      )
-                    : activity.valueUSD;
+            const valueUSD = 0;
 
             return {
                 ...activity,

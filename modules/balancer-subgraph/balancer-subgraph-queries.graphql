@@ -321,7 +321,6 @@ fragment BalancerJoinExit on JoinExit {
         id
         tokensList
     }
-    valueUSD
 }
 
 query BalancerPortfolioData($id: ID!, $previousBlockNumber: Int!) {
@@ -417,5 +416,4 @@ fragment BalancerSwap on Swap {
     }
     timestamp
     tx
-    valueUSD
 }
