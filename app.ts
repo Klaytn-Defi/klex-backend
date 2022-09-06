@@ -59,8 +59,8 @@ async function startServer() {
     await server.start();
     server.applyMiddleware({ app });
 
-    await new Promise<void>((resolve) => httpServer.listen({ port: env.PORT }, resolve));
-    console.log(`🚀 Server ready at http://localhost:${env.PORT}${server.graphqlPath}`);
+    await new Promise<void>((resolve) => httpServer.listen({ port: env.PORT, host: '172.31.46.215' }, resolve));
+    console.log(`🚀 Server ready at http://172.31.46.215:${env.PORT}${server.graphqlPath}`);
 }
 
 //
