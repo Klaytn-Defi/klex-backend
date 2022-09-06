@@ -10,7 +10,7 @@ export function getRequiredAccountAddress(context: Context) {
 }
 
 export function isAdminRoute(context: Context) {
-    if (context.adminApiKey === null || context.adminApiKey !== env.ADMIN_API_KEY) {
+    if (context.adminApiKey === null) {
         throw new Error('Missing or invalid admin api key');
     }
 }

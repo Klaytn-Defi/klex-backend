@@ -18,6 +18,15 @@ export const schema = {
     COPPER_PROXY_ADDRESS: String,
     RPC_URL: String,
     MASTERCHEF_ADDRESS: String,
+    BEETS_ADDRESS: String,
+    FBEETS_ADDRESS: String,
+    SANITY_PROJECT_ID: String,
+    SANITY_DATASET: String,
+    SANITY_API_TOKEN: String,
+    FBEETS_POOL_ID: String,
+    FBEETS_FARM_ID: String,
+    BLOCKS_SUBGRAPH: String,
+    SUBGRAPH_START_DATE: String,
   };
 
 export const env: Env = load(schema, {

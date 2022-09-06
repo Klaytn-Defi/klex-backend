@@ -7,7 +7,6 @@ import { sanityClient } from '../sanity/sanity';
 import { GqlLgeCreateInput } from '../../schema';
 import { getLbpPoolOwner } from './copper-proxy';
 import { getAddress } from 'ethers/lib/utils';
-import { isAddressGnosisSafe } from '../gnosis/gnosis';
 
 export type LbpEventUpdateInput = {
     id: string;
@@ -37,7 +36,7 @@ export async function createLge(input: GqlLgeCreateInput, signature: SignatureLi
         throw new Error(`Signer is not the pool owner`);
     }*/
 
-    const adminIsMultisig = await isAddressGnosisSafe(getAddress(poolOwner));
+    const adminIsMultisig = false
 
     return sanityClient.create({
         _type: 'lbp',
