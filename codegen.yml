@@ -3,18 +3,6 @@ hooks:
   afterAllFileWrite:
     - prettier --write
 generates:
-  modules/balancer-subgraph/generated/balancer-subgraph-types.ts:
-    schema: ${BALANCER_SUBGRAPH}
-    documents: 'modules/balancer-subgraph/balancer-subgraph-queries.graphql'
-    plugins:
-      - typescript
-      - typescript-operations
-      - typescript-graphql-request
-    config:
-      scalars:
-        BigInt: string
-        Bytes: string
-        BigDecimal: string
   modules/balancer-subgraph/generated/balancer-subgraph-schema.graphql:
     schema: ${BALANCER_SUBGRAPH}
     plugins:

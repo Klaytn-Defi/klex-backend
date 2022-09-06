@@ -13,7 +13,7 @@ import { schema } from './graphql_schema_generated';
 import { resolvers } from './app/resolvers';
 import { redis } from './modules/cache/redis';
 import helmet from 'helmet';
-import GraphQLJSON from 'graphql-type-json';
+//import GraphQLJSON from 'graphql-type-json';
 
 async function startServer() {
     //need to open the redis connection prior to adding the rate limit middleware
@@ -49,7 +49,6 @@ async function startServer() {
     ];
     const server = new ApolloServer({
         resolvers: {
-            JSON: GraphQLJSON,
             ...resolvers,
         },
         typeDefs: schema,
